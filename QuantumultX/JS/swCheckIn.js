@@ -64,11 +64,12 @@ var msge;
 var message = "";
 
 !(async () => {
-  $.log("", `开始`, "111");
+  $.log("", `开始`, "111=${sicookie}");
   /*if (typeof $request != "undefined") {
     getCookie();
     return;
   }*/
+  
   await signin();
     $.log("", `开始`, "222");
   //await status();
@@ -100,6 +101,7 @@ function signin() {
       headers: header,
       body: body,
     };
+  $.log("", `开始`, "发送post");
     $.post(signinRequest, (error, response, data) => {
       var body = response.body;
       var obj = JSON.parse(body);
