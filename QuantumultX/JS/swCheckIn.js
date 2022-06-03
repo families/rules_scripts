@@ -105,6 +105,8 @@ function signin() {
     $.post(signinRequest, (error, response, data) => {
       var body = response.body;
       var obj = JSON.parse(body);
+       var t = JSON.stringify(obj);
+  $.log("", `开始`, `t=${t}`);
       msge = obj.message;
       if (msge == "您似乎已经签到过了...") {
         message += "今日已签到✅";
