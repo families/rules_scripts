@@ -102,10 +102,9 @@ function signin() {
       var body = response.body;
       var obj = JSON.parse(body);
       msge = obj.message;
-      if (msge == "Please Checkin Tomorrow") {
+      if (msge == "Please Try Tomorrow") {
         message += "今日已签到";
       }
-      $.msg("GLaDOS", "", "今日签到成功${msge}");
       var date = new Date();
       var y = date.getFullYear();
       var m = date.getMonth() + 1;
