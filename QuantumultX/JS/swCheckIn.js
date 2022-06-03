@@ -64,11 +64,13 @@ var msge;
 var message = "";
 
 !(async () => {
-  if (typeof $request != "undefined") {
+  $.log("", `开始`, "111");
+  /*if (typeof $request != "undefined") {
     getCookie();
     return;
-  }
+  }*/
   await signin();
+    $.log("", `开始`, "222");
   //await status();
 })()
   .catch((e) => {
@@ -105,6 +107,7 @@ function signin() {
       if (msge == "您似乎已经签到过了...") {
         message += "今日已签到✅";
       }
+  $.log("", `开始`, "333");
          $.msg("suwayun", "", "签到测试成功${msge}");
       resolve();return;
 var date = new Date();
