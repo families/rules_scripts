@@ -103,7 +103,7 @@ function signin() {
       var obj = JSON.parse(body);
       msge = obj.message;
       if (msge == "Please Try Tomorrow") {
-        message += "今日已签到，请不要重复签到";
+        message += "今日已签到✅";
       }
       var date = new Date();
       var y = date.getFullYear();
@@ -117,9 +117,9 @@ function signin() {
       if (JSON.stringify(time) == JSON.stringify(sysdate)) {
         change = obj.list[0].change;
         changeday = parseInt(change);
-        message += `\n今日签到获得${changeday}天`;
+        message += `今日签到获得${changeday}天`;
       } else {
-        message += `\n今日签到获得0天`;
+        message += `今日签到获得0天`;
       }
       resolve();
     });
