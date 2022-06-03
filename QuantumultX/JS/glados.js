@@ -92,7 +92,7 @@ function signin() {
       Referer: `https://glados.rocks/console/checkin`,
       "Accept-Language": `zh-cn`,
     };
-    const body = `{ "token": "glados_network" }`;
+    const body = `{ "token": "glados.network" }`;
     const signinRequest = {
       url: "https://glados.rocks/api/user/checkin",
       headers: header,
@@ -105,6 +105,7 @@ function signin() {
       if (msge == "Please Checkin Tomorrow") {
         message += "今日已签到";
       }
+      $.msg("GLaDOS", "", "今日签到成功${msge}");
       var date = new Date();
       var y = date.getFullYear();
       var m = date.getMonth() + 1;
