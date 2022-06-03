@@ -50,8 +50,8 @@ https:\/\/glados\.rocks\/api\/user\/checkin url script-request-header https://ra
 hostname = glados.rocks
 */
 
-const $ = new Env("GLaDOS");
-const signcookie = "evil_gladoscookie";
+const $ = new Env("suwa");
+const signcookie = "evil_checkincookie";
 
 var sicookie = $.getdata(signcookie);
 var account;
@@ -69,7 +69,7 @@ var message = "";
     return;
   }
   await signin();
-  await status();
+  //await status();
 })()
   .catch((e) => {
     $.log("", `❌失败! 原因: ${e}!`, "");
@@ -82,19 +82,19 @@ function signin() {
   return new Promise((resolve) => {
     const header = {
       Accept: `application/json, text/plain, */*`,
-      Origin: `https://glados.rocks`,
+      Origin: `https://m.sw16.icu/m/home`,
       "Accept-Encoding": `gzip, deflate, br`,
       Cookie: sicookie,
       "Content-Type": `application/json;charset=utf-8`,
-      Host: `glados.rocks`,
+      Host: `m.sw16.icu`,
       Connection: `keep-alive`,
       "User-Agent": `Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1`,
-      Referer: `https://glados.rocks/console/checkin`,
+      Referer: `https://m.sw16.icu/api_mweb/user/checkin`,
       "Accept-Language": `zh-cn`,
     };
     const body = `{ "token": "glados.network" }`;
     const signinRequest = {
-      url: "https://glados.rocks/api/user/checkin",
+      url: "https://m.sw16.icu/api_mweb/user/checkin",
       headers: header,
       body: body,
     };
@@ -102,10 +102,12 @@ function signin() {
       var body = response.body;
       var obj = JSON.parse(body);
       msge = obj.message;
-      if (msge == "Please Try Tomorrow") {
+      if (msge == "您似乎已经签到过了...") {
         message += "今日已签到✅";
       }
-      var date = new Date();
+         $.msg("suwayun", "", "签到测试成功${msge}");
+      resolve();return;
+var date = new Date();
       var y = date.getFullYear();
       var m = date.getMonth() + 1;
       if (m < 10) m = "0" + m;
