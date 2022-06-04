@@ -64,7 +64,7 @@ var msge;
 var message = "";
 
 !(async () => {
-  $.log("", `开始`, "111=${sicookie}");
+  $.log("", `开始`, `111=${sicookie}`);
   /*if (typeof $request != "undefined") {
     getCookie();
     return;
@@ -103,7 +103,14 @@ function signin() {
     };
   $.log("", `开始`, "发送post");
     $.post(signinRequest, (error, response, data) => {
-      var body = response.body;
+      var t = JSON.stringify(response);
+  $.log("", `开始aa`, `t=${t}`);
+var tt = JSON.stringify(data);
+  $.log("", `开始bb`, `t=${tt}`);
+var ttt = JSON.stringify(error);
+  $.log("", `开始cc`, `t=${ttt}`);
+
+var body = response.body;
       var obj = JSON.parse(body);
        var t = JSON.stringify(obj);
   $.log("", `开始`, `t=${t}`);
