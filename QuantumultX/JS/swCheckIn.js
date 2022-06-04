@@ -102,7 +102,7 @@ function signin() {
       body: body,
     };
   $.log("", `开始`, "发送post");
-    $.post(signinRequest, (error, response, data) => {
+    $.put(signinRequest, (error, response, data) => {
       var t = JSON.stringify(response);
   $.log("", `开始aa`, `t=${t}`);
 var tt = JSON.stringify(data);
