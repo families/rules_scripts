@@ -100,9 +100,10 @@ function signin() {
       url: "https://m.sw16.icu/api_mweb/user/checkin",
       headers: header,
       body: body,
+      method: put
     };
   $.log("", `开始`, "发送post");
-    $.put(signinRequest, (error, response, data) => {
+    $.post(signinRequest, (error, response, data) => {
       var t = JSON.stringify(response);
   $.log("", `开始aa`, `t=${t}`);
 var tt = JSON.stringify(data);
