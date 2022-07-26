@@ -1,0 +1,7 @@
+# NAME: CostumeDirect
+# DOMAIN: 
+# DOMAIN-SUFFIX: 
+# DOMAIN-KEYWORD: 
+
+payload:
+  - DOMAIN-SUFFIX,gwdang.com   #购物党比价插件需要直连才能使用
