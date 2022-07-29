@@ -3,7 +3,7 @@
 # DOMAIN-SUFFIX: 
 # DOMAIN-KEYWORD: 
 # PROCESS-NAME,chrome.exe
-# mod
+# mod2
 
 payload:
   - DOMAIN-SUFFIX,gwdang.com   #购物党比价插件需要直连才能使用
