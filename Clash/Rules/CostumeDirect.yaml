@@ -1,0 +1,8 @@
+# NAME: CostumeDirect
+# DOMAIN: 
+# DOMAIN-SUFFIX: 
+# DOMAIN-KEYWORD: 
+# PROCESS-NAME,chrome.exe
+
+payload:
+  - DOMAIN-SUFFIX,gwdang.com   #购物党比价插件需要直连才能使用

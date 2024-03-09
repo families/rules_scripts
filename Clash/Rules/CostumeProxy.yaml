@@ -1,0 +1,8 @@
+# NAME: CostumeProxy
+# DOMAIN: 
+# DOMAIN-SUFFIX: 
+# DOMAIN-KEYWORD: 
+# PROCESS-NAME,chrome.exe
+
+payload:
+  - DOMAIN,translate.googleapis.com   #划词翻译中谷歌翻译需要走代理
