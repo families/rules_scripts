@@ -1,0 +1,9 @@
+# NAME: CostumeProxy
+
+# DOMAIN,
+# DOMAIN-SUFFIX,
+# DOMAIN-KEYWORD, 
+# PROCESS-NAME,
+
+PROCESS-NAME,brave.exe
+DOMAIN,translate.googleapis.com   #划词翻译中谷歌翻译需要走代理
